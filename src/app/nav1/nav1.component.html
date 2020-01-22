@@ -1,0 +1,24 @@
+<div class="container">
+    <table cdkDropList (cdkDropListDropped)="dropTest($event)">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+        <th>Action</th>
+      </tr>
+        <tr *ngFor="let item of categorie_array" cdkDrag>
+          <td>{{item.name}}</td>
+          <td>{{item.contact}}</td>
+          <td>{{item.country}}</td>
+          <td><button (click)="delete(item)">Remove</button></td>
+        </tr>
+      </table>
+    </div>
+
+        <form (submit)="add()">
+        <input type="text" [(ngModel)] = "name" name='Name' required>
+        <input type="text" [(ngModel)] = "contact" name='Contact' required>
+        <input type="text" [(ngModel)] = "country" name='Country' required>
+
+        <button type="submit">Add</button>
+        </form>
