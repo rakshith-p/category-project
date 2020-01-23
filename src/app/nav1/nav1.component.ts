@@ -16,19 +16,15 @@ addNew = false;
   categorie_array = [
     {
       name: 'something1',
-      contact: 'idk',
-      country:'idk'
-
+      seq: 1,
     },
     {
       name: 'something2',
-      contact: 'idk',
-      country:'idk'
+      seq: 2,
     },
     {
       name: 'something3',
-      contact: 'idk',
-      country:'idk'
+      seq: 3
     }
   ];
 
@@ -45,20 +41,19 @@ addNew = false;
   add(){
 this.categorie_array.push({
   name: this.name,
-  contact: this.contact,
-  country: this.country
+  seq: this.categorie_array.length + 1,
 
 });
 this.addNew = false;
 this.name ='';
   }
 
-  delete(item){
-for(let i =0; i < this.categorie_array.length; i++){
-  if(this.categorie_array[i]['name'] == item.name){
-  this.categorie_array.splice(i, 1);
-  }
-}
+  delete(item) {
+    for (let i = 0; i < this.categorie_array.length; i++) {
+      if (this.categorie_array[i].name === item.name) {
+      this.categorie_array.splice(i, 1);
+      }
+    }
   }
 
   ngOnInit() {
