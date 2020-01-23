@@ -7,6 +7,11 @@ import { Nav3Component } from './nav3/nav3.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: "/nav1",
+    pathMatch: 'full'
+  },
+  {
     path: 'nav1',
     component: Nav1Component,
     data: { title: 'Nav1', help_id: '#' }

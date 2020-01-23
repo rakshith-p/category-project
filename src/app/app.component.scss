@@ -1,4 +1,8 @@
 
+.main-container{
+  background-color: #eaeef5;
+}
+
 .navbar{
   background-color: #0a3645 !important;
   padding: unset;
@@ -32,9 +36,6 @@
       }
     }
   }
-  .dropdown {
-    align-self: flex-end;
-  }
 
   .dropdown-menu{
     left: unset;
@@ -42,6 +43,32 @@
   }
 
 }
+
+//svg
+.group-1 {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.topbar-center-logo .top-bar-center {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+@media screen and (max-width: 39.9375em) {
+  .topbar-center-logo .top-bar-center {
+    display: none;
+  }
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+
 
 
 

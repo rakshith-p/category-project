@@ -44,6 +44,7 @@
   }
   .save-btn{
     float: right;
+    clear: both;
     width: 35px;
     height: 12px;
     font-family: Helvetica;
@@ -66,6 +67,8 @@
   }
 
   .container {
+    box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
+    
     @media (min-width: 375px) {
       width: $iphone-width;
       padding-right: unset;

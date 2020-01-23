@@ -1,9 +1,10 @@
 <div class="container">
-  <div class="section-header">
-<span>Section</span>
-<button class="add-new-button" (click)="addnew()">+ add category</button>
 
-  </div>
+    <div class="section-header">
+        <span>Section</span>
+        <button class="add-new-button" (click)="opened = !opened">+ add category</button>
+        
+          </div>
 
   <form (submit)="add()">
     <table cdkDropList (cdkDropListDropped)="dropTest($event)">
@@ -22,23 +23,15 @@
           </td>
         </tr>
 
-        <ng-template [ngIf]="addNew == true">
+        <ng-template [ngIf]="opened == true">
           <tr>
             <td><img src="assets/img/Group-15551.svg" class="Group-15551 move-img"/></td>
             <td><input type="text" id ="categoryField" [(ngModel)] = "name" name='Name' required></td>
             <td></td>
             <td><button class="save-btn" type="submit">SAVE</button></td>
-            </tr>
+          </tr>
         </ng-template>
       </table>
     </form>
 
     </div>
-
-        <!-- <form (submit)="add()">
-        <input type="text" [(ngModel)] = "name" name='Name' required>
-        <input type="text" [(ngModel)] = "contact" name='Contact' required>
-        <input type="text" [(ngModel)] = "country" name='Country' required>
-
-        <button type="submit">Add</button>
-        </form> -->
