@@ -11,6 +11,7 @@ export class Nav1Component implements OnInit {
 name: string;
 contact: string;
 country: string;
+addNew = false;
 
   categorie_array = [
     {
@@ -37,13 +38,19 @@ country: string;
     moveItemInArray(this.categorie_array, event.previousIndex, event.currentIndex);
   }
 
+  addnew(){
+    this.addNew = !this.addNew;
+  }
+
   add(){
 this.categorie_array.push({
   name: this.name,
   contact: this.contact,
   country: this.country
 
-})
+});
+this.addNew = false;
+this.name ='';
   }
 
   delete(item){

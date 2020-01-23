@@ -1,4 +1,11 @@
 <div class="container">
+  <div class="section-header">
+<span>section</span>
+<button (click)="addnew()">+ add category</button>
+
+  </div>
+
+  <form (submit)="add()">
     <table cdkDropList (cdkDropListDropped)="dropTest($event)">
       <tr>
         <th>Company</th>
@@ -12,13 +19,23 @@
           <td>{{item.country}}</td>
           <td><button (click)="delete(item)">Remove</button></td>
         </tr>
+
+        <ng-template [ngIf]="addNew == true">
+          <tr>
+                <td></td>
+                <td><input type="text" id ="categoryField" [(ngModel)] = "name" name='Name' required></td>
+                 <td><button type="submit">Add</button></td>
+            </tr>
+        </ng-template>
       </table>
+    </form>
+
     </div>
 
-        <form (submit)="add()">
+        <!-- <form (submit)="add()">
         <input type="text" [(ngModel)] = "name" name='Name' required>
         <input type="text" [(ngModel)] = "contact" name='Contact' required>
         <input type="text" [(ngModel)] = "country" name='Country' required>
 
         <button type="submit">Add</button>
-        </form>
+        </form> -->
