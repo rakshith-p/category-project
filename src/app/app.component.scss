@@ -12,12 +12,12 @@
       padding-top: 15px;
       padding-bottom: 15px;
       opacity: 0.55;
-      font-family: Helvetica;
       font-size: 10px;
       line-height: 1.2;
-      text-align: center;
       color: #ffffff;
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
   }
@@ -28,10 +28,6 @@
     .nav-link {
       font-weight: bold;
       opacity: unset;
-
-      a {
-        text-align: center;
-      }
     }
   }
 

@@ -18,6 +18,48 @@ $iphone-width: 352.1px;
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+.section-header {
+  padding-top: 19px;
+  padding-left: 25px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #0a3645;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  width: 53px;
+  height: 9px;
+  font-size: 9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+  color: #7a8a90;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(10, 54, 69, 0.16);
+}
+
+tr {
+  box-shadow: 0 0.5px 0.5px 0 rgba(10, 54, 69, 0.16);
+  background-color: #f0f2f5;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
 
 .container {
   box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
@@ -39,56 +81,12 @@ $iphone-width: 352.1px;
   }
 }
 
-.section-header {
-  padding-top: 19px;
-  padding-left: 25px;
-  background-color: #fff;
-  font-family: Helvetica;
-  font-size: 14px;
-  color: #0a3645;
-}
-
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  width: 53px;
-  height: 9px;
-  font-family: Helvetica;
-  font-size: 9px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  text-align: left;
-  color: #7a8a90;
-  background-color: #fff;
-  box-shadow: 0 1px 1px 0 rgba(10, 54, 69, 0.16);
-}
-
-tr {
-  box-shadow: 0 0.5px 0.5px 0 rgba(10, 54, 69, 0.16);
-  background-color: #f0f2f5;
-}
-
-tr:nth-child(even){
-  background-color: #fff;
-}
-
 
 .add-new-button {
+  padding: 2px 14px 0 0;
   float: right;
   width: auto;
   height: 10px;
-  font-family: Helvetica;
   font-size: 10px;
   font-weight: bold;
   font-stretch: normal;
@@ -96,9 +94,6 @@ tr:nth-child(even){
   text-align: left;
   text-transform: uppercase;
   color: #06b4de;
-  outline: 0;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.12);
-  border: unset;
 }
 
 .remove-btn {
@@ -115,7 +110,6 @@ tr:nth-child(even){
   clear: both;
   width: 35px;
   height: 12px;
-  font-family: Helvetica;
   font-size: 12px;
   font-weight: bold;
   font-stretch: normal;
@@ -125,6 +119,7 @@ tr:nth-child(even){
   outline: 0;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.12);
   border: unset;
+  background: none;
 }
 
 .move-img {
